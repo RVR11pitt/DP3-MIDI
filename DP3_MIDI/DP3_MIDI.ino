@@ -8,12 +8,25 @@
 
 */
 
+const int slidePot = A3;
+
+int slidePotVal = 0;
+
+int lastSlidePotVal = 0;
+
 void setup() {
-  // put your setup code here, to run once:
+
+  Serial.begin(9600); // enable serial communication
 
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+
+
+
+  readPots(); // Read potentiometers  
+
+  // Extra delay to ensure no MIDI flooding
+  delay(20);
 
 }
