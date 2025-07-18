@@ -61,6 +61,7 @@ void readKeyPad() {
               break;
             case 'C':
               writeMIDI(kpc, midC + 11, 127);
+              break;
             case '*':
               writeMIDI(kpc, midC + 12, 127);
               break;
@@ -71,7 +72,7 @@ void readKeyPad() {
               writeMIDI(kpc, midC + 14, 127);
               break;
             case 'D':
-              writeMIDI(kpc, midC + 115, 127);
+              writeMIDI(kpc, midC + 15, 127);
 
           }
         }
@@ -114,6 +115,7 @@ void readKeyPad() {
               break;
             case 'C':
               writeMIDI(kpc - 16, midC + 11, 127);
+              break;
             case '*':
               writeMIDI(kpc - 16, midC + 12, 127);
               break;
@@ -124,7 +126,7 @@ void readKeyPad() {
               writeMIDI(kpc - 16, midC + 14, 127);
               break;
             case 'D':
-              writeMIDI(kpc - 16, midC + 115, 127);
+              writeMIDI(kpc - 16, midC + 15, 127);
 
           }
         }

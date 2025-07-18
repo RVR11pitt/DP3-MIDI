@@ -24,7 +24,7 @@ void readEncoders() {
 
   if (newPos1 > position1) {  // increases encoder #1
     position1 = newPos1;
-    encVals[cVal]++;
+    encVals[cVal] += 4;
     encVals[cVal] = constrain(encVals[cVal], 0, 127);
 
     writeMIDI(0xB2, cVal, encVals[cVal]);
@@ -32,7 +32,7 @@ void readEncoders() {
 
   if (newPos1 < position1) {  // decreases encoder #1
     position1 = newPos1;
-    encVals[cVal]--;
+    encVals[cVal] -= 4;
     encVals[cVal] = constrain(encVals[cVal], 0, 127);
 
     writeMIDI(0xB2, cVal, encVals[cVal]);
@@ -40,7 +40,7 @@ void readEncoders() {
 
   if (newPos2 > position2) {  // increases encoder #2
     position2 = newPos2;
-    encVals[cVal + 1]++;
+    encVals[cVal + 1] += 4;
     encVals[cVal + 1] = constrain(encVals[cVal + 1], 0, 127);
 
     writeMIDI(0xB2, cVal + 1, encVals[cVal + 1]);
@@ -48,7 +48,7 @@ void readEncoders() {
 
   if (newPos2 < position2) {  // decreases encoder #2
     position2 = newPos2;
-    encVals[cVal + 1]--;
+    encVals[cVal + 1] -= 4;
     encVals[cVal + 1] = constrain(encVals[cVal + 1], 0, 127);
 
     writeMIDI(0xB2, cVal + 1, encVals[cVal + 1]);
