@@ -18,16 +18,25 @@ void readPots() {
   int diff = 10; // difference amount
 
   // READ POTENTIOMETERS //
-  rotPotVal = analogRead(rotPot);
+  slidePotVal1 = analogRead(slidePot1);
+  slidePotVal2 = analogRead(slidePot2);
 
   // CALCULATE DIFFERENCE BETWEEN NEW VALUE AND LAST RECORDED VALUE //
-  int rotPotValdiff = rotPotVal - lastRotPotVal;
+  int slidePotValdiff1 = slidePotVal1 - lastSlidePotVal1;
+  int slidePotValdiff2 = slidePotVal2 - lastSlidePotVal2;
   
   // SEND MIDI MESSAGE //
-  if (abs(rotPotValdiff) > diff)
+  if (abs(slidePotValdiff1) > diff)
   {
-    writeMIDI(0xB1, 3, map(rotPotVal, 1023, 0, 0, 127));
-    lastRotPotVal = rotPotVal;
+    writeMIDI(0xB1, 0, map(slidePotVal1, 1023, 0, 0, 127));
+    lastSlidePotVal1 = slidePotVal1;
+  }
+
+
+  if (abs(slidePotValdiff2) > diff)
+  {
+    writeMIDI(0xB1, 1, map(slidePotVal2, 1023, 0, 0, 127));
+    lastSlidePotVal2 = slidePotVal2;
   }
 
   delay(20); // small delay further stabilizes sensor readings

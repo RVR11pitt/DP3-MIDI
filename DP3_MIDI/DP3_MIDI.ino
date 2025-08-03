@@ -33,14 +33,14 @@ int midC = 60; // MIDI note value for middle C on a standard keyboard
 
 // POTENTIOMETERS //
 
-const int rotPot = A4;
-const int slidePot = A5;
+const int slidePot1 = A4;
+const int slidePot2 = A5;
 
-int rotPotVal = 0;
-int slidePotVal = 0;
+int slidePotVal1 = 0;
+int slidePotVal2 = 0;
 
-int lastRotPotVal = 0;
-int lastSlidePotVal = 0;
+int lastSlidePotVal1 = 0;
+int lastSlidePotVal2 = 0;
 
 // ROTARY ENCODERS //
 
@@ -78,10 +78,9 @@ void loop() {
   readRotSwitch();    // Read rotary switch
   readEncoders();     // Read encoders
   readPots();         // Read potentiometers 
-  readKeyPad();
+  readKeyPad();       // Read keypad
 
   // Extra delay to ensure no MIDI flooding
-
   delay(20);
 
 }
