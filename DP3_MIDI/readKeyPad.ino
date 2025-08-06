@@ -1,14 +1,14 @@
 /*
-  The keypad runs on the keypad.h library, which you also can use
-  to run other similar keypads with similar pinouts, or even use
-  regular micro switches in an array to build your own keypad.
+  Function: Reads keypad inputs
 
-  With the use of a bidirectional toggle switch the keypad
-  mapping can also be transposed, or moved, up and down the
-  scale. The keypad starts with middle C (note number 60) on the
-  Nr 1 key. Using the transpose switch moves the keypad one entire
-  octave up or down, within the full range (0 - 127) of available
-  notes.
+  Inputs:
+    - NONE
+
+  Outputs:
+    - NONE
+
+  NOTE: Runs on the keypad.h library. Structured with two case statements
+        for handling turning the notes ON and OFF
 */
 
 int kpc = 144; // the function of the keypad, 144 = Channel 1 Note on

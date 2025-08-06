@@ -51,7 +51,7 @@ Encoder enc1(2,A3);
 Encoder enc2(3,A2);
 long position1 = -999;
 long position2 = -999;
-int encVals[12] = {64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64}; // set initial value of encoder to mid range of 0-127
+int encVals[12] = {64, 64, 64, 64, 64, 64, 64, 64}; // set initial value of encoder to mid range of 0-127
 
 // ROTARY SWITCH //
 const int rotSwitch1 = 4;   // PD4
